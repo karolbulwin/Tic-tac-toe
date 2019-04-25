@@ -12,11 +12,7 @@ const Square = props => {
 
 const Board = props => {
   const sq = props.squares.map((square, index) => (
-    <Square
-      value={square}
-      key={[Symbol]}
-      onClick={() => props.onClick(index)}
-    />
+    <Square value={square} key={index} onClick={() => props.onClick(index)} />
   ));
   return sq;
 };
