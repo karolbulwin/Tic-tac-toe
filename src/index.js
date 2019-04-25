@@ -90,13 +90,14 @@ class Game extends React.Component {
           squares: squares
         }
       ]),
+      stepNumber: history.length,
       xIsNext: !this.state.xIsNext
     });
   }
 
   render() {
     const history = this.state.history;
-    const current = history[history.length - 1];
+    const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
     let status;
