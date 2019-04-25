@@ -103,6 +103,15 @@ class Game extends React.Component {
   }
 }
 
+const PlayAgain = props => (
+  <div className="game-done">
+    <div className="message">
+      {props.gameStatus !== null ? `The winner is ${props.gameStatus}` : ""}
+    </div>
+    <button onClick={props.onClick}>Play Again</button>
+  </div>
+);
+
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
