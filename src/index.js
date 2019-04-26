@@ -89,6 +89,8 @@ class Game extends React.Component {
       status = `Next player: ${this.state.xIsNext ? "X" : "O"}`;
     }
 
+    const gameStatus = winner || this.outOfMoves(current) ? true : false;
+
     return (
       <div className="game">
         <div className="game-board">
