@@ -76,6 +76,14 @@ class Game extends React.Component {
     });
   }
 
+  outOfMoves(currentBoard) {
+    const status = currentBoard.squares.filter(square => square === null);
+    if (status.length === 0) {
+      return true;
+    }
+    return false;
+  }
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
