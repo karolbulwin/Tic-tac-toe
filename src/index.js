@@ -132,4 +132,9 @@ function calculateWinner(squares) {
   return null;
 }
 
-ReactDOM.render(<Game />, document.body);
+const TicTacToe = () => {
+  const [gameId, setGameId] = React.useState(1);
+  return <Game key={gameId} startNewGame={() => setGameId(gameId + 1)} />;
+};
+
+ReactDOM.render(<TicTacToe />, document.body);
