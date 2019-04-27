@@ -36,6 +36,9 @@ body {
   .game-info {
     .control-menu {
       display: flex;
+      button {
+        min-height: 3.5em;
+      }
       .dropdown {
         position: relative;
         display: inline-block;
