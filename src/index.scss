@@ -1,0 +1,86 @@
+@import "colors";
+
+body {
+  font: 1em "Century Gothic", Futura, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .game-board {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 2em;
+    .square {
+      background: $secondary;
+      border: 1px solid darken($color: $secondary, $amount: 30%);
+      font-size: 4em;
+      font-weight: bold;
+      height: 1.5em;
+      padding: 0;
+      text-align: center;
+      width: 1.5em;
+    }
+    .message {
+      margin: 1em 0;
+      font-size: 1.5em;
+    }
+  }
+  .game-info {
+    .control-menu {
+      display: flex;
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        .dropbtn {
+          min-width: 8em;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: darken($color: $secondary, $amount: 10%);
+          min-width: 12em;
+          box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          left: -2em;
+          ul {
+            list-style: none;
+            padding: 0;
+            button {
+              min-width: 9em;
+            }
+          }
+        }
+        .show {
+          display: block;
+        }
+      }
+    }
+  }
+  button {
+    background-color: $secondary;
+    border: 2px solid $primary;
+    border-radius: 0.2em;
+    margin: 0.05em;
+    color: $primary;
+    padding: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    &:hover:not(.square) {
+      background-color: $primary;
+      color: $secondary;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 3px 1px $primary;
+    }
+  }
+}
