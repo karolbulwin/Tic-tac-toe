@@ -155,6 +155,34 @@ function calculateWinner(squares) {
   return null;
 }
 
+const MovesControlMenu = props => {
+  const move = props.current ? `Move #${props.current}` : "Go to start";
+
+  return (
+    <div className="control-menu">
+      <button onClick={props.goBack}>
+        <i class="fas fa-chevron-left" />
+      </button>
+      <div className="dropdown">
+        <button
+          onClick={() => {
+            document.getElementById("dropdown-moves").classList.toggle("show");
+          }}
+          className="dropbtn"
+        >
+          {move}
+        </button>
+        <div id="dropdown-moves" className="dropdown-content">
+          <ul>{props.moves}</ul>
+        </div>
+      </div>
+      <button onClick={props.goForward}>
+        <i class="fas fa-chevron-right" />
+      </button>
+    </div>
+  );
+};
+
 const TicTacToe = () => {
   const [gameId, setGameId] = React.useState(1);
   return <Game key={gameId} startNewGame={() => setGameId(gameId + 1)} />;
