@@ -36,7 +36,9 @@ class Game extends React.Component {
   jumpTo(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: step % 2 === 0
+      xIsNext: step % 2 === 0,
+      goBackMove: step > 0 ? step - 1 : step,
+      goForwardMove: step < this.state.history.length - 1 ? step + 1 : step
     });
   }
 
@@ -74,7 +76,9 @@ class Game extends React.Component {
         }
       ]),
       stepNumber: history.length,
-      xIsNext: !this.state.xIsNext
+      xIsNext: !this.state.xIsNext,
+      goBackMove: history.length - 1,
+      goForwardMove: history.length
     });
   }
 
