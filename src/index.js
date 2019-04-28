@@ -81,6 +81,14 @@ class Game extends React.Component {
       goBackMove: history.length - 1,
       goForwardMove: history.length
     });
+    setTimeout(async () => {
+      if (
+        this.state.gameType === "one-player" &&
+        this.state.xIsNext === false
+      ) {
+        const currentBoard = this.state.history[this.state.history.length - 1];
+        const aiTurn = await aiMoves(currentBoard);
+        this.handleClick(aiTurn);
   }
 
   outOfMoves(currentBoard) {
