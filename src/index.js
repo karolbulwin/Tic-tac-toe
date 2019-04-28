@@ -96,13 +96,6 @@ class Game extends React.Component {
     const winner = calculateWinner(current.squares);
     const moves = this.showPast(history);
 
-    let status;
-    if (winner) {
-      status = `Winner: ${winner}`;
-    } else {
-      status = `Next player: ${this.state.xIsNext ? "X" : "O"}`;
-    }
-
     const gameStatus = winner || this.outOfMoves(current) ? true : false;
 
     return (
