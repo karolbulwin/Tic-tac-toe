@@ -201,7 +201,19 @@ const GameMenu = props => {
 
 const TicTacToe = () => {
   const [gameId, setGameId] = React.useState(1);
-  return <Game key={gameId} startNewGame={() => setGameId(gameId + 1)} />;
+  const [gameType, setgameType] = React.useState();
+  const setGame = props => {
+    setgameType(props.target.value);
+  };
+  return gameType === undefined ? (
+    <GameMenu setGame={setGame} />
+  ) : (
+    <Game
+      key={gameId}
+      gameType={gameType}
+      startNewGame={() => setGameId(gameId + 1)}
+    />
+  );
 };
 
 ReactDOM.render(<TicTacToe />, document.body);
