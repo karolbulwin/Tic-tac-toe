@@ -89,6 +89,8 @@ class Game extends React.Component {
         const currentBoard = this.state.history[this.state.history.length - 1];
         const aiTurn = await aiMoves(currentBoard);
         this.handleClick(aiTurn);
+      }
+    }, 150);
   }
 
   outOfMoves(currentBoard) {
