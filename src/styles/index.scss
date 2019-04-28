@@ -74,31 +74,31 @@ h1 {
       }
     }
   }
-  button {
-    background-color: $secondary;
-    border: 2px solid $primary;
-    border-radius: 0.2em;
-    margin: 0.05em;
-    color: $primary;
-    padding: 1em;
-    font-size: 1em;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 3px 1px $primary;
-    }
-    @media not all and (hover: none) {
-      &:hover:not(.square) {
-        background-color: lighten($color: $primary, $amount: 10%);
-        color: $secondary;
-      }
-    }
-    &:active:not(.square) {
-      background-color: $primary;
+}
+button {
+  background-color: $secondary;
+  border: 2px solid $primary;
+  border-radius: 0.2em;
+  margin: 0.05em;
+  color: $primary;
+  padding: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px $primary;
+  }
+  @media not all and (hover: none) {
+    &:hover:not(.square) {
+      background-color: lighten($color: $primary, $amount: 10%);
       color: $secondary;
-      box-shadow: 0 0 3px 1px $primary;
     }
+  }
+  &:active:not(.square) {
+    background-color: $primary;
+    color: $secondary;
+    box-shadow: 0 0 3px 1px $primary;
   }
 }
 
