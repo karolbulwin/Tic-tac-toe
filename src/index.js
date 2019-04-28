@@ -114,8 +114,12 @@ class Game extends React.Component {
           )}
         </div>
         <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
+          <MovesControlMenu
+            goBack={() => this.jumpTo(this.state.goBackMove)}
+            goForward={() => this.jumpTo(this.state.goForwardMove)}
+            moves={moves}
+            current={this.state.stepNumber}
+          />
         </div>
       </div>
     );
