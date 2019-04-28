@@ -29,7 +29,8 @@ class Game extends React.Component {
       stepNumber: 0,
       xIsNext: true,
       goBackMove: 0,
-      goForwardMove: 0
+      goForwardMove: 0,
+      gameType: props.gameType
     };
   }
 
