@@ -9,6 +9,9 @@ body {
   margin: 0;
   background-color: darken($color: $secondary, $amount: 3%);
   user-select: none;
+  > div {
+    text-align: center;
+  }
 }
 
 h1 {
