@@ -4,7 +4,7 @@ export const MovesControlMenu = props => {
 	return (
 		<div className="control-menu">
 			<button onClick={props.goBack}>
-				<i class="fas fa-chevron-left" />
+				<i className="fas fa-chevron-left" />
 			</button>
 			<div className="dropdown">
 				<button
@@ -20,7 +20,7 @@ export const MovesControlMenu = props => {
 				</div>
 			</div>
 			<button onClick={props.goForward}>
-				<i class="fas fa-chevron-right" />
+				<i className="fas fa-chevron-right" />
 			</button>
 		</div>
 	);
