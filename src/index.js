@@ -6,4 +6,4 @@ import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(<TicTacToe />, document.getElementById("root"));
 
-serviceWorker.unregister();
+serviceWorker.register();
