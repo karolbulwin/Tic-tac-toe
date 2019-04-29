@@ -35,13 +35,21 @@ class Game extends React.Component {
   }
 
   jumpTo(step) {
-    this.setState({
-      stepNumber: step,
-      xIsNext: step % 2 === 0,
-      goBackMove: step > 0 ? step - 1 : step,
-      goForwardMove: step < this.state.history.length - 1 ? step + 1 : step
-    });
-  }
+		this.state.gameType === "one-player"
+			? this.setState({
+				stepNumber: step,
+				xIsNext: step % 2 === 0,
+				goBackMove: step - 1 > 0 ? step - 2 : step,
+				goForwardMove:
+						step + 1 < this.state.history.length - 1 ? step + 2 : step
+			  })
+			: this.setState({
+				stepNumber: step,
+				xIsNext: step % 2 === 0,
+				goBackMove: step > 0 ? step - 1 : step,
+				goForwardMove: step < this.state.history.length - 1 ? step + 1 : step
+			  });
+	}
 
   showPast(history) {
     const moves = history.map((step, move) => {
