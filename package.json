@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,5 +33,17 @@
   },
   "devDependencies": {
     "node-sass": "^4.11.0"
-  }
+  },
+  "description": "tic-tac-toe game, one / two players",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karolbulwin/Tic-tac-toe.git"
+  },
+  "author": "Karol Bulwin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karolbulwin/Tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/karolbulwin/Tic-tac-toe#readme"
 }
