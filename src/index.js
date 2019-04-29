@@ -51,16 +51,21 @@ class Game extends React.Component {
 			  });
 	}
 
-  showPast(history) {
-    const moves = history.map((step, move) => {
-      const desc = move ? `Go to move #${move}` : "Go to start";
+	showPast(history, gameType) {
+		const moves = history.map((step, move) => {
+			const desc = move ? `Go to move #${move}` : "Go to start";
+			const disabled = gameType === "one-player" ? true : false;
+
       return (
         <li>
           <button
             style={{
-              fontWeight: this.state.stepNumber === move ? "bold" : "normal"
-            }}
-            onClick={() => this.jumpTo(move)}
+							fontWeight: this.state.stepNumber === move ? "bold" : "normal",
+							cursor: move % 2 !== 0 ? "not-allowed" : "pointer",
+							"text-decoration-line": move % 2 !== 0 ? "line-through" : "none"
+						}}
+						onClick={() => this.jumpTo(move)}
+						disabled={move % 2 !== 0 ? disabled : false}
           >
             {desc}
           </button>
@@ -113,7 +118,7 @@ class Game extends React.Component {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
-    const moves = this.showPast(history);
+		const moves = this.showPast(history, this.state.gameType);
 
     const gameStatus = winner || this.outOfMoves(current) ? true : false;
 
