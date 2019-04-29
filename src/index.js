@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.scss";
+import { aiMoves } from "./logic/aiMoves";
 
 const Square = props => {
   return (
