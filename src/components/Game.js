@@ -47,7 +47,7 @@ export class Game extends React.Component {
 							style={{
 								fontWeight: this.state.stepNumber === move ? "bold" : "normal",
 								cursor: move % 2 !== 0 ? "not-allowed" : "pointer",
-								"text-decoration-line": move % 2 !== 0 ? "line-through" : "none"
+								textDecorationLine: move % 2 !== 0 ? "line-through" : "none"
 							}}
 							onClick={() => this.jumpTo(move)}
 							disabled={move % 2 !== 0 ? true : false}
