@@ -13,7 +13,6 @@ export const getPotentialMovs = squares => {
 	let potentialMove;
 
 	for (let i = 0; i < lines.length; i++) {
-		//debugger;
 		const [a, b, c] = lines[i];
 		if (squares[a] && squares[a] === squares[b]) {
 			if (squares[c] === null) {
