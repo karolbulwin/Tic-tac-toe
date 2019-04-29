@@ -94,12 +94,12 @@ button {
     box-shadow: 0 0 3px 1px $primary;
   }
   @media not all and (hover: none) {
-    &:hover:not(.square) {
+    &:hover:not(.square):not(:disabled) {
       background-color: lighten($color: $primary, $amount: 10%);
       color: $secondary;
     }
   }
-  &:active:not(.square) {
+  &:active:not(.square):not(:disabled) {
     background-color: $primary;
     color: $secondary;
     box-shadow: 0 0 3px 1px $primary;
