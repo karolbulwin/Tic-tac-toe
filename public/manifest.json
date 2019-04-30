@@ -6,38 +6,31 @@
   "description": "Offline game. One or two players",
   "icons": [
     {
-      "purpose": "maskable",
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "purpose": "maskable",
       "src": "./icons/favicon-16.png",
       "sizes": "16x16"
     },
     {
-      "purpose": "maskable",
       "src": "./icons/favicon-64.png",
       "sizes": "64x64"
     },
     {
-      "purpose": "maskable",
       "src": "./icons/favicon-128.png",
       "sizes": "128x128"
     },
     {
-      "purpose": "maskable",
       "src": "./icons/favicon-144.png",
       "sizes": "144x144"
     },
     {
-      "purpose": "maskable",
       "src": "./icons/favicon-192.png",
       "sizes": "192x192"
     },
     {
-      "purpose": "maskable",
       "src": "./icons/favicon-512.png",
       "sizes": "512x512"
     }
