@@ -19,6 +19,12 @@ h1 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
 }
 
+.game-menu {
+  button {
+    margin: 0.15em;
+  }
+}
+
 .game {
   align-items: center;
   display: flex;

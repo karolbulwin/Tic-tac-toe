@@ -3,7 +3,7 @@ export const GameMenu = props => {
 	return (
 		<div>
 			<h1>Tic-tac-toe</h1>
-			<div>
+			<div className="game-menu">
 				<button onClick={props.setGame} value="one-player">
 					One Player
 				</button>
