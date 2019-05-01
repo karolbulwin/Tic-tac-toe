@@ -25,25 +25,6 @@ h1 {
   }
 }
 
-.arrow-right {
-  width: 0;
-  height: 0;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-left: 1em double rgb(0, 0, 0);
-  margin-left: 0.3em;
-}
-
-.arrow-left {
-  width: 0;
-  height: 0;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-right: 1em double rgb(0, 0, 0);
-  margin-right: 0.3em;
-  float: right;
-}
-
 .game {
   align-items: center;
   display: flex;
@@ -107,6 +88,26 @@ h1 {
     }
   }
 }
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 0.75em solid transparent;
+  border-bottom: 0.75em solid transparent;
+  border-left: 0.75em solid rgb(0, 0, 0);
+  margin-left: 0.45em;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 0.75em solid transparent;
+  border-bottom: 0.75em solid transparent;
+  border-right: 0.75em solid rgb(0, 0, 0);
+  margin-right: 0.45em;
+  float: right;
+}
+
 button {
   background-color: $secondary;
   border: 2px solid $primary;
