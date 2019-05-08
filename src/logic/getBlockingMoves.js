@@ -12,13 +12,23 @@ export const getBlockingMoves = (squares, usedMoves) => {
 	if (blockingMovesLeft.length !== 0) {
 		if (
 			(squares[0] && squares[0] === squares[8]) ||
-			(squares[0] && squares[0] === squares[7]) ||
-			(squares[2] && squares[2] === squares[7]) ||
-			(squares[6] && squares[6] === squares[2])
+			(squares[2] && squares[2] === squares[6])
 		) {
 			potentialMove = {
-				square: blockingMove,
-				sign: "X"
+				sign: "X",
+				square: blockingMove
+			};
+			potentialMoves.push(potentialMove);
+		} else if (squares[0] && squares[0] === squares[7] && squares[3] === null) {
+			potentialMove = {
+				sign: "X",
+				square: 3
+			};
+			potentialMoves.push(potentialMove);
+		} else if (squares[2] && squares[2] === squares[7] && squares[5] === null) {
+			potentialMove = {
+				sign: "X",
+				square: 5
 			};
 			potentialMoves.push(potentialMove);
 		}
