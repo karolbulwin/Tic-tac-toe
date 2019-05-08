@@ -12,17 +12,17 @@ function renderPlayAgain(args) {
 	return shallow(<PlayAgain {...props} />);
 }
 
-it("should render Draw", () => {
+it("should display message 'Draw'", () => {
 	const wrapper = renderPlayAgain({ gameStatus: "Draw" });
 	expect(wrapper.find(".message").text()).toBe("Draw");
 });
 
-it("should render 'X'", () => {
+it("should display message 'The winner is X'", () => {
 	const wrapper = renderPlayAgain({ gameStatus: "X" });
 	expect(wrapper.find(".message").text()).toBe("The winner is X");
 });
 
-it("should render 'O'", () => {
+it("should display message 'The winner is O'", () => {
 	const wrapper = renderPlayAgain({ gameStatus: "O" });
 	expect(wrapper.find(".message").text()).toBe("The winner is O");
 });
