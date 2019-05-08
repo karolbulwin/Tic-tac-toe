@@ -31,6 +31,18 @@ export const getBlockingMoves = (squares, usedMoves) => {
 				square: 5
 			};
 			potentialMoves.push(potentialMove);
+		} else if (squares[6] && squares[6] === squares[5] && squares[7] === null) {
+			potentialMove = {
+				sign: "X",
+				square: 7
+			};
+			potentialMoves.push(potentialMove);
+		} else if (squares[8] && squares[8] === squares[3] && squares[7] === null) {
+			potentialMove = {
+				sign: "X",
+				square: 7
+			};
+			potentialMoves.push(potentialMove);
 		}
 	}
 	return potentialMoves;
