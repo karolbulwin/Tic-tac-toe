@@ -12,6 +12,8 @@ export const getBlockingMoves = (squares, usedMoves) => {
 	if (blockingMovesLeft.length !== 0) {
 		if (
 			(squares[0] && squares[0] === squares[8]) ||
+			(squares[0] && squares[0] === squares[7]) ||
+			(squares[2] && squares[2] === squares[7]) ||
 			(squares[6] && squares[6] === squares[2])
 		) {
 			potentialMove = {
