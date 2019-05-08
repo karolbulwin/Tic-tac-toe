@@ -26,3 +26,8 @@ it("should render 'O'", () => {
 	const wrapper = renderPlayAgain({ gameStatus: "O" });
 	expect(wrapper.find(".message").text()).toBe("The winner is O");
 });
+
+it("should render button", () => {
+	const wrapper = renderPlayAgain({ gameStatus: "X" });
+	expect(wrapper.find("button").length).toBe(1);
+});
