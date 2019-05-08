@@ -114,14 +114,18 @@ export class Game extends React.Component {
 		const current = history[this.state.stepNumber];
 		const winner = calculateWinner(current.squares);
 		const moves = this.showPast(history, this.state.gameType);
-		const gameStatus = winner || this.outOfMoves(current) ? true : false;
+		const gameStatus = this.outOfMoves(current)
+			? "Draw"
+			: winner
+				? winner
+				: "Still playing";
 		return (
 			<div className="game">
 				<div className="game-board">
-					{gameStatus ? (
+					{gameStatus !== "Still playing" ? (
 						<PlayAgain
 							onClick={() => this.props.startNewGame()}
-							gameStatus={winner}
+							gameStatus={gameStatus}
 						/>
 					) : (
 						<Board
