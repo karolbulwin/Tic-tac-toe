@@ -1,0 +1,23 @@
+// import React from "react";
+// import { cleanup, render } from "react-testing-library";
+// import PlayAgain from "./PlayAgain";
+// import { debug } from "util";
+
+// afterEach(cleanup);
+
+// function renderPlayAgain(args) {
+// 	const defaultProps = {
+// 		gameStatus: null,
+// 		onClick: () => {}
+// 	};
+
+// 	const props = { ...defaultProps, ...args };
+// 	return render(<PlayAgain {...props} />);
+// }
+
+// it("should render Draw", () => {
+// 	const { getByText } = renderPlayAgain();
+// 	getByText("Draw");
+// });
+
+export default undefined;
