@@ -1,5 +1,7 @@
 import React from "react";
-export const GameMenu = props => {
+import PropTypes from "prop-types";
+
+const GameMenu = props => {
 	return (
 		<div>
 			<h1>Tic-tac-toe</h1>
@@ -14,3 +16,9 @@ export const GameMenu = props => {
 		</div>
 	);
 };
+
+GameMenu.propTypes = {
+	setGame: PropTypes.func.isRequired
+};
+
+export default GameMenu;
