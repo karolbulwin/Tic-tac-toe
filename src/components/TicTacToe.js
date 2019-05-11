@@ -1,5 +1,5 @@
 import React from "react";
-import { GameMenu } from "./GameMenu";
+import GameMenu from "./GameMenu";
 import { Game } from "./Game";
 
 export const TicTacToe = () => {
