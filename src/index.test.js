@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { TicTacToe } from "./components/TicTacToe";
+import TicTacToe from "./components/TicTacToe";
 
 it("renders without crashing", () => {
 	const div = document.createElement("div");
