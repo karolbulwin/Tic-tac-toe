@@ -5,7 +5,7 @@ import { calculateWinner } from "../logic/calculateWinner";
 import PlayAgain from "./PlayAgain";
 import MovesControlMenu from "./MovesControlMenu";
 
-export class Game extends React.Component {
+class Game extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -146,3 +146,5 @@ export class Game extends React.Component {
 		);
 	}
 }
+
+export default Game;
