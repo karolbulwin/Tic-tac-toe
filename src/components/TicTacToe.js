@@ -2,7 +2,7 @@ import React from "react";
 import GameMenu from "./GameMenu";
 import { Game } from "./Game";
 
-export const TicTacToe = () => {
+const TicTacToe = () => {
 	const [gameId, setGameId] = React.useState(1);
 	const [gameType, setgameType] = React.useState();
 	const setGame = props => {
@@ -18,3 +18,5 @@ export const TicTacToe = () => {
 		/>
 	);
 };
+
+export default TicTacToe;
