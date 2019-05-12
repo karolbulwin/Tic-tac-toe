@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const MovesControlMenu = props => {
 	const move = props.current ? `Move #${props.current}` : "Go to start";
@@ -25,6 +26,13 @@ const MovesControlMenu = props => {
 			</button>
 		</div>
 	);
+};
+
+MovesControlMenu.propTypes = {
+	current: PropTypes.number.isRequired,
+	goBack: PropTypes.func.isRequired,
+	moves: PropTypes.array.isRequired,
+	goForward: PropTypes.func.isRequired
 };
 
 export default MovesControlMenu;
