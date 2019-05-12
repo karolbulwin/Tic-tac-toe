@@ -1,6 +1,6 @@
 import React from "react";
 import GameMenu from "./GameMenu";
-import { Game } from "./Game";
+import Game from "./Game";
 
 const TicTacToe = () => {
 	const [gameId, setGameId] = React.useState(1);
