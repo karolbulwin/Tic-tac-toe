@@ -1,5 +1,6 @@
 import React from "react";
-export const MovesControlMenu = props => {
+
+const MovesControlMenu = props => {
 	const move = props.current ? `Move #${props.current}` : "Go to start";
 	return (
 		<div className="control-menu">
@@ -25,3 +26,5 @@ export const MovesControlMenu = props => {
 		</div>
 	);
 };
+
+export default MovesControlMenu;
