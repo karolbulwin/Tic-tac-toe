@@ -3,7 +3,7 @@ import { aiMoves } from "../logic/aiMoves";
 import Board from "./Board";
 import { calculateWinner } from "../logic/calculateWinner";
 import PlayAgain from "./PlayAgain";
-import { MovesControlMenu } from "./MovesControlMenu";
+import MovesControlMenu from "./MovesControlMenu";
 
 export class Game extends React.Component {
 	constructor(props) {
