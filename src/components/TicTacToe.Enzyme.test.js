@@ -2,12 +2,8 @@ import React from "react";
 import TicTacToe from "./TicTacToe";
 import { mount } from "enzyme";
 
-function renderTicTacToe(args) {
-	const defaultProps = {
-		gameType: "one-player"
-	};
-	const props = { ...defaultProps, ...args };
-	return mount(<TicTacToe {...props} />);
+function renderTicTacToe() {
+	return mount(<TicTacToe />);
 }
 
 it("should render GameMenu", () => {
