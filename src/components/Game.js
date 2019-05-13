@@ -149,8 +149,8 @@ class Game extends React.Component {
 }
 
 Game.propTypes = {
-	gameType: PropTypes.string.isRequired,
-	startNewGame: PropTypes.func.isRequired
+	gameType: PropTypes.string,
+	startNewGame: PropTypes.func
 };
 
 export default Game;
