@@ -6,7 +6,7 @@ function renderMovesControlMenu(args) {
 	const defaultProps = {
 		current: 0,
 		goBack: () => {},
-		moves: Array(5).fill(<li />),
+		moves: [],
 		goForward: () => {}
 	};
 
