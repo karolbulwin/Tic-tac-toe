@@ -4,6 +4,7 @@ import Board from "./Board";
 import { calculateWinner } from "../logic/calculateWinner";
 import PlayAgain from "./PlayAgain";
 import MovesControlMenu from "./MovesControlMenu";
+import PropTypes from "prop-types";
 
 class Game extends React.Component {
 	constructor(props) {
@@ -146,5 +147,10 @@ class Game extends React.Component {
 		);
 	}
 }
+
+Game.propTypes = {
+	gameType: PropTypes.string.isRequired,
+	startNewGame: PropTypes.func.isRequired
+};
 
 export default Game;
