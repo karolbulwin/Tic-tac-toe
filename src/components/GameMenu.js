@@ -18,7 +18,7 @@ const GameMenu = props => {
 };
 
 GameMenu.propTypes = {
-	setGame: PropTypes.func.isRequired
+	setGame: PropTypes.func
 };
 
 export default GameMenu;
