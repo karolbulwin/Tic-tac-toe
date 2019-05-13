@@ -5,8 +5,8 @@ import Game from "./Game";
 const TicTacToe = () => {
 	const [gameId, setGameId] = React.useState(1);
 	const [gameType, setgameType] = React.useState();
-	const setGame = props => {
-		setgameType(props.target.value);
+	const setGame = ({ target }) => {
+		setgameType(target.value);
 	};
 	return gameType === undefined ? (
 		<GameMenu setGame={setGame} />
