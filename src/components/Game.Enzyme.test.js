@@ -59,6 +59,33 @@ it("button should have text 'Move #2' and Square[2] should be '' after click on 
 	expect(squares.at(2).text()).toBe("");
 });
 
+it("button still should have text 'Move #1' after click on right arrow multiple times", () => {
+	const wrapper = renderGame();
+	const squares = wrapper.find("Square");
+	squares.at(0).simulate("click");
+
+	expect(wrapper.find(".dropbtn").text()).toBe("Move #1");
+	wrapper.find(".arrow-right").simulate("click");
+	wrapper.find(".arrow-right").simulate("click");
+	wrapper.find(".arrow-right").simulate("click");
+	wrapper.find(".arrow-right").simulate("click");
+	expect(wrapper.find(".dropbtn").text()).toBe("Move #1");
+});
+
+it("button still should have text 'Move #1' after click on left arrow multiple times and one click on right arrow", () => {
+	const wrapper = renderGame();
+	const squares = wrapper.find("Square");
+	squares.at(0).simulate("click");
+
+	expect(wrapper.find(".dropbtn").text()).toBe("Move #1");
+	wrapper.find(".arrow-left").simulate("click");
+	wrapper.find(".arrow-left").simulate("click");
+	wrapper.find(".arrow-left").simulate("click");
+	wrapper.find(".arrow-left").simulate("click");
+	wrapper.find(".arrow-right").simulate("click");
+	expect(wrapper.find(".dropbtn").text()).toBe("Move #1");
+});
+
 it("Board should not render, Play Again should render, the message should be 'The winner is X', button Play Again should render", () => {
 	const wrapper = renderGame();
 	const squares = wrapper.find("Square");
