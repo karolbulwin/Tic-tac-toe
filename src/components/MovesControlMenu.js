@@ -15,7 +15,7 @@ const MovesControlMenu = props => {
 					}}
 					className="dropbtn"
 				>
-					{move}
+					{props.isOutOfMoves ? "End" : move}
 				</button>
 				<div id="dropdown-moves" className="dropdown-content">
 					<ul>{props.moves}</ul>
@@ -32,7 +32,8 @@ MovesControlMenu.propTypes = {
 	current: PropTypes.number.isRequired,
 	goBack: PropTypes.func.isRequired,
 	moves: PropTypes.array.isRequired,
-	goForward: PropTypes.func.isRequired
+	goForward: PropTypes.func.isRequired,
+	isOutOfMoves: PropTypes.bool.isRequired
 };
 
 export default MovesControlMenu;

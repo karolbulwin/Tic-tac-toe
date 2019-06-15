@@ -115,7 +115,8 @@ class Game extends React.Component {
 		const current = history[this.state.stepNumber];
 		const winner = calculateWinner(current.squares);
 		const moves = this.showPast(history, this.state.gameType);
-		const gameStatus = this.outOfMoves(current)
+		const isOutOfMoves = this.outOfMoves(current);
+		const gameStatus = isOutOfMoves
 			? "Draw"
 			: winner
 				? winner
@@ -141,6 +142,7 @@ class Game extends React.Component {
 						goForward={() => this.jumpTo(this.state.goForwardMove)}
 						moves={moves}
 						current={this.state.stepNumber}
+						isOutOfMoves={isOutOfMoves}
 					/>
 				</div>
 			</div>
