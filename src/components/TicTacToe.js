@@ -1,21 +1,44 @@
 import React from "react";
 import GameMenu from "./GameMenu";
 import Game from "./Game";
+import SwitchGame from "./SwitchGame";
 
 const TicTacToe = () => {
 	const [gameId, setGameId] = React.useState(1);
-	const [gameType, setgameType] = React.useState();
+	const [gameType, setGameType] = React.useState("");
 	const setGame = ({ target }) => {
-		setgameType(target.value);
+		setGameType(target.value);
 	};
-	return gameType === undefined ? (
+
+	const setGameee = ({ target }) => {
+		switch (target.tagName) {
+		case "I":
+			setGameType(target.parentElement.parentElement.value);
+			break;
+		case "SPAN":
+			setGameType(target.parentElement.value);
+			break;
+		default:
+			setGameType(target.value);
+		}
+		setGameId(gameId + 1);
+	};
+	return gameType === "" ? (
 		<GameMenu setGame={setGame} />
 	) : (
-		<Game
-			key={gameId}
-			gameType={gameType}
-			startNewGame={() => setGameId(gameId + 1)}
-		/>
+		<>
+			<SwitchGame
+				gameType={gameType}
+				setGameee={setGameee}
+				startNewGame={() => setGameId(gameId + 1)}
+			/>
+			<Game
+				key={gameId}
+				gameType={gameType}
+				setGame={setGame}
+				startNewGame={() => setGameId(gameId + 1)}
+			/>
+		</>
 	);
 };
 
