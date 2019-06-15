@@ -35,7 +35,8 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "radium": "^0.25.2"
   },
   "description": "tic-tac-toe game, one / two players",
   "main": "./index.js",
