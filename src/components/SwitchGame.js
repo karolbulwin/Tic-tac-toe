@@ -3,14 +3,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./SwitchGame-styles";
 
-const SwitchGame = ({ gameType, setGameee }) => {
+const SwitchGame = ({ gameType, setGameAtPlayTime }) => {
 	return (
 		<div style={styles.root}>
 			<button
 				key="one-p"
 				className=""
 				style={gameType === "one-player" ? styles.active : styles.btn}
-				onClick={setGameee}
+				onClick={setGameAtPlayTime}
 				name="one-player"
 				value="one-player"
 			>
@@ -23,7 +23,7 @@ const SwitchGame = ({ gameType, setGameee }) => {
 				key="two-p"
 				className=""
 				style={gameType === "two-players" ? styles.active : styles.btn}
-				onClick={setGameee}
+				onClick={setGameAtPlayTime}
 				name="two-players"
 				value="two-players"
 			>
@@ -37,7 +37,7 @@ const SwitchGame = ({ gameType, setGameee }) => {
 
 SwitchGame.propTypes = {
 	gameType: PropTypes.string,
-	setGameee: PropTypes.func
+	setGameAtPlayTime: PropTypes.func
 };
 
 export default Radium(SwitchGame);

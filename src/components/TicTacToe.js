@@ -10,7 +10,7 @@ const TicTacToe = () => {
 		setGameType(target.value);
 	};
 
-	const setGameee = ({ target }) => {
+	const setGameAtPlayTime = ({ target }) => {
 		switch (target.tagName) {
 		case "I":
 			setGameType(target.parentElement.parentElement.value);
@@ -29,7 +29,7 @@ const TicTacToe = () => {
 		<>
 			<SwitchGame
 				gameType={gameType}
-				setGameee={setGameee}
+				setGameAtPlayTime={setGameAtPlayTime}
 				startNewGame={() => setGameId(gameId + 1)}
 			/>
 			<Game
