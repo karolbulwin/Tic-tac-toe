@@ -2,6 +2,8 @@ import Radium from "radium";
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./SwitchGame-styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faUserFriends } from "@fortawesome/free-solid-svg-icons";
 
 const SwitchGame = ({ gameType, setGameAtPlayTime }) => {
 	return (
@@ -15,7 +17,7 @@ const SwitchGame = ({ gameType, setGameAtPlayTime }) => {
 				value="one-player"
 			>
 				<span>
-					<i className="fas fa-user" />
+					<FontAwesomeIcon icon={faUser} />
 				</span>
 			</button>
 			/
@@ -28,7 +30,7 @@ const SwitchGame = ({ gameType, setGameAtPlayTime }) => {
 				value="two-players"
 			>
 				<span>
-					<i className="fas fa-user-friends" />
+					<FontAwesomeIcon icon={faUserFriends} />
 				</span>
 			</button>
 		</div>
