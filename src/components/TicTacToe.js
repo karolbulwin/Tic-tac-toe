@@ -12,7 +12,10 @@ const TicTacToe = () => {
 
 	const setGameAtPlayTime = ({ target }) => {
 		switch (target.tagName) {
-		case "I":
+		case "path":
+			setGameType(target.parentElement.parentElement.parentElement.value);
+			break;
+		case "svg":
 			setGameType(target.parentElement.parentElement.value);
 			break;
 		case "SPAN":
