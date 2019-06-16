@@ -7,7 +7,8 @@ function renderMovesControlMenu(args) {
 		current: 0,
 		goBack: () => {},
 		moves: [],
-		goForward: () => {}
+		goForward: () => {},
+		isOutOfMoves: false
 	};
 
 	const props = { ...defaultProps, ...args };
@@ -22,4 +23,9 @@ it("should render button with text 'Go to start'", () => {
 it("should render button with text 'Move #1'", () => {
 	const wrapper = renderMovesControlMenu({ current: 1 });
 	expect(wrapper.find(".dropbtn").text()).toBe("Move #1");
+});
+
+it("should render button with text 'End'", () => {
+	const wrapper = renderMovesControlMenu({ current: 9, isOutOfMoves: true });
+	expect(wrapper.find(".dropbtn").text()).toBe("End");
 });
