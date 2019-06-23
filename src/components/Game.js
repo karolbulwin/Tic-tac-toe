@@ -117,11 +117,8 @@ class Game extends React.Component {
 		const winner = calculateWinner(current.squares);
 		const moves = this.showPast(history, this.state.gameType);
 		const isOutOfMoves = this.outOfMoves(current);
-		const gameStatus = isOutOfMoves
-			? "Draw"
-			: winner
-				? winner
-				: "Still playing";
+		const gameStatus =
+			isOutOfMoves && !winner ? "Draw" : winner ? winner : "Still playing";
 		return (
 			<div className="game">
 				<div className="game-board">
